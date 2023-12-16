@@ -1,0 +1,58 @@
+
+<div class="container">
+    <h2>Reservation Form</h2>
+    <div class="row">
+      <div class="col-lg-6">
+        <form [formGroup]="reservationForm" (ngSubmit)="onSubmitBooking()">
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter Full Name">
+          </div>
+          <div class="mb-3">
+            <label for="id_number" class="form-label">ID Number</label>
+            <input type="text" class="form-control" id="id_number" formControlName="id_number" placeholder="Enter ID Number">
+          </div>
+          <div class="mb-3">
+            <label for="phone_number" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone_number" formControlName="phone_number" placeholder="Enter Phone Number">
+          </div>
+          <div class="mb-3">
+            <label for="pickup_date" class="form-label">Pickup Date</label>
+            <input type="date" class="form-control" id="pickup_date" formControlName="pickup_date">
+          </div>
+          <div class="mb-3">
+            <label for="dropoff_date" class="form-label">Drop-off Date</label>
+            <input type="date" class="form-control" id="dropoff_date" formControlName="dropoff_date">
+          </div>
+          <div class="mb-3">
+            <label for="destination" class="form-label">Destination</label>
+            <input type="text" class="form-control" id="destination" formControlName="destination" placeholder="Enter Destination">
+          </div>
+          <div class="mb-3">
+            <label for="pickup_location" class="form-label">Pickup Location</label>
+            <input type="text" class="form-control" id="pickup_location" formControlName="pickup_location" placeholder="Enter Pickup Location">
+          </div>
+          <div class="mb-3">
+            <label for="dropoff_location" class="form-label">Drop-off Location</label>
+            <input type="text" class="form-control" id="dropoff_location" formControlName="dropoff_location" placeholder="Enter Pickup Location">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    
+      <div class="col-lg-6">
+        <div *ngIf="selectedCar">
+          <div class="car-card" style="width: 300px; height: 400px;">
+            <img [src]="selectedCar.picture" class="card-img-top" alt="Car Image">
+            <div class="card-body">
+              <h5 class="card-title">{{selectedCar.car_name}}</h5>
+              <p class="card-text">{{selectedCar.properties}}</p>
+              <button class="btn btn-primary" routerLink="/carList">Change Car</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    

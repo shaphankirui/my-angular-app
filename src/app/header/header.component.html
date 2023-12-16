@@ -1,0 +1,55 @@
+<!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a routerLink="/home" class="logo">
+        <img src="assets/images/logo11.jpg" width="301" height="28" alt="Mabati solution">
+      </a>
+
+      <nav class="navbar" data-navbar [ngClass]="status ? 'active' : ''">
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a routerLink="/home" class="label-lg navbar-link has-after" routerLinkActive="active">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="/product"  class="label-lg navbar-link has-after" >Cars</a>
+          </li>
+          <li class="navbar-item">
+            <a routerLink="/service"  class="label-lg navbar-link has-after" routerLinkActive="active">Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="/portfolio"  class="label-lg navbar-link has-after" routerLinkActive="active">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="/contact"  class="label-lg navbar-link has-after" routerLinkActive="active">Contact</a>
+          </li>
+          
+          <li class="navbar-item">
+            <a routerLink="/login"  class="label-lg navbar-link has-after" routerLinkActive="active">Login</a>
+          </li>
+          <li class="navbar-item">
+            <a routerLink="/dashboard"  class="label-lg navbar-link has-after" routerLinkActive="active">DashBoard</a>
+          </li>
+
+          <!-- <li class="navbar-item">
+            <a routerLink="/login"  class="label-lg navbar-link has-after" routerLinkActive="active">Login</a>
+          </li> -->
+
+        </ul>
+      </nav>
+
+      <a routerLink="/contact" class="btn btn-primary">Contact us Now</a>
+
+      <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler (click)="addToggle()">
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>

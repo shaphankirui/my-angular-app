@@ -1,0 +1,20 @@
+<form (ngSubmit)="onSubmit(myForm)" class="form-container" #myForm="ngForm" style="margin-top: 100px; display: flex; flex-direction: column;align-items: center; padding-top: 50px;">
+  <h1 class="title">Add New Car</h1>
+  <div class="form-field">
+      <label for="carName">Car Name*</label>
+      <input type="text" id="carName" name="name" placeholder="Name of the car" required>
+    </div>
+  
+    <div class="form-field">
+      <label for="properties">Properties</label>
+      <textarea id="properties" name="properties" placeholder="Properties of the car" required></textarea>
+    </div>
+  
+    <div class="form-field">
+      <label for="picture">Select Picture</label>
+      <input type="file" id="picture" name="picture" required>
+    </div>
+  
+    <button class="btn btn-primary" style="width: 30%;" type="submit">Add</button>
+  </form>
+  

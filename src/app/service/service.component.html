@@ -1,0 +1,425 @@
+<main>
+    <article>
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <!-- <section class="section service has-bg-image" aria-labelledby="service-label"
+        style="background-image: url('assets/images/service-bg.png')">
+        <div class="container">
+
+          <h2 class="section-title headline-md text-center" id="service-label">My Services</h2>
+
+          <ul class="service-list">
+
+            <li class="card-container">
+              <div class="card card-md" style=" background-image: url('assets/images/mpg.jpg');
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-attachment: fixed;">
+
+                <div class="about-banner">
+                  <img src="assets/images/mpg.jpg"  />    
+                            </div>
+
+                <div>
+                  <h3 class="card-title title-sm">Mabati</h3>
+
+                  <p class="body-sm">
+                    2metres 700shillings guage 28.
+                 </p>
+
+                  <p class="body-sm">
+                    3metres 1050shillings guage 28. Coloured one. Box profile.
+                 </p>
+                  <p class="body-sm">
+                    rejects, 2metres 550 guage 303metrs 750 guage 30.                 
+                  </p>
+                  
+                </div>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card card-md" style="background-color: hsl(41, 99%, 64%)">
+
+                <div class="card-media">
+                  <ion-icon name="laptop-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="card-title title-sm">Funitures Chairs</h3>
+
+                  <p class="body-sm">
+                    3 seaters, 2 seaters, L seaters among others
+                  </p>
+                  <p class="body-sm">
+                    Sofa sets 35000
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card card-md" style="background-color: hsl(19, 97%, 85%)">
+
+                <div class="card-media">
+                  <ion-icon name="stats-chart-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="card-title title-sm">SEO Marketing</h3>
+
+                  <p class="body-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card card-md" style="background-color: hsl(221, 100%, 79%)">
+
+                <div class="card-media">
+                  <ion-icon name="shapes-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="card-title title-sm">Web Design</h3>
+
+                  <p class="body-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card card-md" style="background-color: hsl(76, 39%, 72%)">
+
+                <div class="card-media">
+                  <ion-icon name="code-slash-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="card-title title-sm">Development</h3>
+
+                  <p class="body-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card card-md" style="background-color: hsl(245, 100%, 90%)">
+
+                <div class="card-media">
+                  <ion-icon name="globe-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="card-title title-sm">SEO Marketing</h3>
+
+                  <p class="body-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section> -->
+
+
+      <section class="section portfolio" aria-labelledby="portfolio-label">
+        <div class="container">
+
+          <h2 class="section-title headline-md text-center" id="portfolio-label">Our Fleet</h2>
+
+          <ul class="portfolio-list">
+
+            <li *ngFor="let car of cars">
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540; border-radius: 30px;">
+                  <img [src]="car.picture" width="800" height="540" loading="lazy"
+                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+
+                  <!-- <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup"> -->
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  <!-- </a> -->
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">Roofing Materials</span>
+
+                  <h3 class="title-md">{{car.car_name}}</h3>
+
+                
+                    <ul class="card-text">
+                      <li style="color: brown;"><b>{{car.properties}}</b></li>
+                      <li style="color: red ; font-weight: bold; font-size: xx-large;">Ksh. 3000</li>
+                      <li style="color: green ; font-style: italic;font-weight: bold;">Per Day</li>
+                    </ul>
+                  
+
+                  <a  class="btn btn-primary" (click)="hireNow(car.id)">Book Now</a>
+
+                </div>
+
+              </div>
+            </li>
+
+
+            <!-- <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/mblack.jpeg" width="800" height="540" loading="lazy"
+                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md"> More of Roofing Materials</span>
+
+                  <h3 class="title-md">Mabati</h3>
+
+                
+                    <ul class="card-text">
+                      <li style="color: red ; font-style: italic;font-weight: bold;">3-Metres Quage-28</li>
+                      <li style="color: green ; font-style: italic;font-weight: bold ; font-size: xx-large;">@ Ksh. 1050</li>
+                      <li style="color: blue ; font-style: italic;font-weight: bold;" >Available in Varius Colors</li>
+                    </ul>
+                  
+
+                  <a href="#" class="btn btn-primary">Call To order</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/mblue.jpeg" width="800" height="540" loading="lazy"
+                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">More of Roofing Materials</span>
+
+                  <h3 class="title-md">Mabati</h3>
+
+                
+                    <ul class="card-text">
+                      <li style="color: green ; font-style: italic;font-weight: bold;">2-Metres Quage-28</li>
+                      <li style="color: brown ; font-style: italic;font-weight: bold ;font-size: xx-large;">@ Ksh. 700 and ksh 1050 3-metres</li>
+                      <li style="color: blue ; font-style: italic;font-weight: bold;">Available in Varius Colors</li>
+                    </ul>
+                  
+
+                  <a href="#" class="btn btn-primary">Call To order</a>
+
+                </div>
+
+              </div>
+            </li>
+
+
+            <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/mblue.jpeg" width="800" height="540" loading="lazy"
+                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">More of Roofing Materials</span>
+
+                  <h3 class="title-md">Mabati(Rejects)</h3>
+
+                
+                    <ul class="card-text">
+                      <li style="color: red ; font-style: italic;font-weight: bold;">2-Metres Quage-30</li>
+                      <li style="color: blue ; font-style: italic;font-weight: bold; font-size: xx-large;">@ Ksh. 550 and ksh. 750 3-metres Guage-30</li>
+                      <li style="color: green ; font-style: italic;font-weight: bold;">Available in Varius Colors</li>
+                    </ul>
+                  
+
+                  <a href="#" class="btn btn-primary">Call To order</a>
+
+                </div>
+
+              </div>
+            </li>
+
+
+
+
+
+
+            <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/couch1.jpeg" width="800" height="540" loading="lazy"
+                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">Furnitures</span>
+
+                  <h3 class="title-md">Sofa Sets</h3>
+
+                  <ul class="card-text">
+                    <li style="color: blue ; font-style: italic;font-weight: bold;">Available in various Design and Colors</li>
+                    <li  style="color: red ; font-weight: bold; font-size: xx-large;">@ Ksh 35000</li>
+                  </ul>
+
+                  <a href="#" class="btn btn-primary">Call To Order</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/couch2.jpeg" width="800" height="540" loading="lazy"
+                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">Furnitures</span>
+
+                  <h3 class="title-md">Sofa Sets</h3>
+
+                  <ul class="card-text">
+                    <li style="color: blue ; font-style: italic;font-weight: bold;">Available in various Design and Colors</li>
+                    <li style="color: green ; font-style: italic;font-weight: bold;">We have 3 seaters,2 Seaters and L seaters sofa Sets</li>
+                    <li style="color :brown ; font-style: italic;font-weight: bold ; font-size: x-large;"> Starting @ Ksh. 35000 Negosiable</li>
+                  </ul>
+
+                  <a href="#" class="btn btn-primary">Call To Order</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/nails.jpg" width="800" height="540" loading="lazy"
+                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">Building materials</span>
+
+                  <h3 class="title-md">Tiles</h3>
+
+                  <ul class="card-text">
+                    <li style="color: blue ; font-style: italic;font-weight: bold;">Available in various Design and Types</li>
+                  
+                    <li style="color: maroon ; font-style: italic;font-weight: bold;font-size: xx-large;">@ Ksh. 3500 per Box</li>
+                  </ul>
+
+                  <a href="#" class="btn btn-primary">Call To Order</a>
+
+                </div>
+
+              </div>
+            </li>
+
+
+            <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/nails.jpeg" width="800" height="540" loading="lazy"
+                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">Building materials</span>
+
+                  <h3 class="title-md">Nails</h3>
+
+                  <ul class="card-text">
+                    <li style="color: green ; font-style: italic;font-weight: bold;">Available in various Design and Types</li>
+                  
+                    <li style="color: maroon ; font-style: italic;font-weight: bold; font-size: xx-large;">@ Ksh. 230 per kgs</li>
+                  </ul>
+
+                  <a href="#" class="btn btn-primary">Call To Order</a>
+
+                </div>
+
+              </div>
+            </li> -->
+
+          </ul>
+
+        </div>
+      </section>
+
+
+    </article>
+  </main>
