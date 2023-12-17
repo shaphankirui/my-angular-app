@@ -13,30 +13,30 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <a routerLink="/home" class="label-lg navbar-link has-after" routerLinkActive="active">Home</a>
+            <a routerLink="/home" class="label-lg navbar-link has-after" routerLinkActive="active" (click)="closeNav()">Home</a>
           </li>
 
           <li class="navbar-item">
-            <a routerLink="/product"  class="label-lg navbar-link has-after" >Cars</a>
+            <a routerLink="/product"  class="label-lg navbar-link has-after" routerLinkActive="active" (click)="closeNav()" >Cars</a>
           </li>
           <li class="navbar-item">
-            <a routerLink="/service"  class="label-lg navbar-link has-after" routerLinkActive="active">Services</a>
-          </li>
-
-          <li class="navbar-item">
-            <a routerLink="/portfolio"  class="label-lg navbar-link has-after" routerLinkActive="active">About</a>
+            <a routerLink="/service"  class="label-lg navbar-link has-after" routerLinkActive="active" (click)="closeNav()">Services</a>
           </li>
 
           <li class="navbar-item">
-            <a routerLink="/contact"  class="label-lg navbar-link has-after" routerLinkActive="active">Contact</a>
+            <a routerLink="/portfolio"  class="label-lg navbar-link has-after" routerLinkActive="active" (click)="closeNav()">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="/contact"  class="label-lg navbar-link has-after" routerLinkActive="active" (click)="closeNav()">Contact</a>
           </li>
           
-          <li class="navbar-item">
-            <a routerLink="/login"  class="label-lg navbar-link has-after" routerLinkActive="active">Login</a>
+          <!-- <li class="navbar-item">
+            <a routerLink="/login"  class="label-lg navbar-link has-after" routerLinkActive="active" (click)="closeNav()">Login</a>
           </li>
           <li class="navbar-item">
-            <a routerLink="/dashboard"  class="label-lg navbar-link has-after" routerLinkActive="active">DashBoard</a>
-          </li>
+            <a routerLink="/dashboard"  class="label-lg navbar-link has-after" routerLinkActive="active" (click)="closeNav()">DashBoard</a>
+          </li> -->
 
           <!-- <li class="navbar-item">
             <a routerLink="/login"  class="label-lg navbar-link has-after" routerLinkActive="active">Login</a>
