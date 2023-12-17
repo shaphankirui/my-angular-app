@@ -1,0 +1,55 @@
+#map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50vh;
+    height: 50vh;
+}
+/* Overall Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a modern sans-serif font */
+    background-color: #f2f2f2; /* Set a light background color */
+    color: #333; /* Set the main text color */
+  }
+  
+  /* Card Content Styles */
+  .card-content {
+    background-color: #fff; /* White background for the card content */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+  }
+  
+  /* Header Styles */
+  h2, h3, h4 {
+    color: #333; /* Dark text color for headers */
+  }
+  
+  /* Paragraph Styles */
+  p {
+    color: #666; /* Medium gray text color for paragraphs */
+  }
+  
+  /* Button Styles */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db; /* Button color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .btn:hover {
+    background-color: #2980b9; /* Button color on hover */
+  }
+
+  /* Adjustments for Small Screens */
+  @media screen and (max-width: 600px) {
+    .card-content {
+      padding: 10px;
+    }
+  }
